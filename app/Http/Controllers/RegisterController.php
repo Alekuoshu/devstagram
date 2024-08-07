@@ -44,6 +44,6 @@ class RegisterController extends Controller
 
         // Redirect
         session()->flash('success', 'Your account has been created!');
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index', auth()->user()->username);
     }
 }
